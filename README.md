@@ -41,3 +41,16 @@ server->>browser: spa.js
 browser->>server: HTTP GET https://studies.cs.helsinki.fi/example/data.json
 server->>browser: [{"content":"hola, como estás?", "date": "2024-1-1"},...]
 ```
+
+## 0.6
+```mermaid
+sequenceDiagram
+browser->>browser: crear nota
+browser->>browser: notes.push(note)
+browser->>browser: renderizar lista de notas
+
+browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server-->>browser: HTTP 201
+
+
+```

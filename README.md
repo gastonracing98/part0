@@ -1,4 +1,5 @@
 # part0
+## 0.4
 
 ```mermaid
 sequenceDiagram
@@ -20,4 +21,11 @@ browser->>server: HTTP GET https://studies.cs.helsinki.fi/example/data.json
 server-->>browser [{"content":"hola, como estás?", "date": "2024-1-1"}]
 
 Note right of browser: Cuando se obtienen los datos, el navegador ejecuta un controlador de eventos, que muetra las notas en la página utilizando DOM-API!
+```
+
+## 0.5
+```mermaid
+sequenceDiagram
+browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+server-->>browser: HTTP 302
 ```
